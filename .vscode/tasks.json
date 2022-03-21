@@ -1,0 +1,22 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Generate Build System",
+            "type": "shell",
+            "command": "cmake -S ${workspaceFolder}/src -B ${workspaceFolder}/build"
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "cmake --build ${workspaceFolder}/build",
+        },
+        {
+            "label": "Pre-Launch",
+            "dependsOn": ["Generate Build System", "Build"],
+            "dependsOrder": "sequence"
+        }
+    ]
+}
