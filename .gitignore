@@ -1,0 +1,7 @@
+# VS Code files
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# Build files
+build/
